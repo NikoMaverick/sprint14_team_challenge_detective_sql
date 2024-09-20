@@ -15,7 +15,7 @@ SELECT * FROM interview WHERE person_id = '16371' 14887
 SELECT * FROM get_fit_now_member WHERE membership_start_date = '20180109' 
 SELECT * FROM get_fit_now_member WHERE membership_status = 'gold' ORDER BY id DESC
 
---TABLA DEL GIT
+--TABLA DEL Gym
 SELECT * FROM get_fit_now_member WHERE id LIKE '48Z%'  
 
 --MATRICULA DEL SOSPCHOSO
@@ -33,11 +33,13 @@ SELECT * FROM get_fit_now_member WHERE id LIKE '48Z%'
 INSERT INTO solution VALUES (1, 'Tomas Baisley');
 INSERT INTO solution VALUES (1, 'Joe Germuska');
 
--- El Autor del crime person_id = 67318 id=48Z55
+-- El Autor del crimen person_id = 67318 id=48Z55
 INSERT INTO solution VALUES (1, 'Jeremy Bowers'); 
 
---Declaracion del asesino; Tesla Model S.
+--Declaracion del asesino 
 SELECT * FROM interview WHERE person_id = '67318' 
+
+--Busqueda de propietario/a Tesla Model S.
 SELECT * FROM drivers_license WHERE car_make LIKE '%Tesla%' AND car_model = 'Model S'
 
 --2 sospechosas licence_id 202298,291182
@@ -46,10 +48,10 @@ AND hair_color = 'red' AND height > '65' AND height < '67';
 --id sospechosas
 SELECT * FROM person WHERE license_id IN (202298, 291182) 
 
--- Cerebro person_id 20171206
+-- Cerebro person_id 20171206 que va al evento concierto 3 veces en diciembre 2017
 SELECT * FROM facebook_event_checkin WHERE person_id IN (90700, 99716) 
 
--- Asesino confeso
+-- Id de la mujer que contrata al asesino
 SELECT * FROM person WHERE id = '99716'
 SELECT value FROM solution;
 
